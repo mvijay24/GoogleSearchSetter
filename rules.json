@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "q",
+                "value": "{1}"
+              }
+            ]
+          },
+          "scheme": "https",
+          "host": "www.google.com",
+          "path": "/search"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "*://www.bing.com/search*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "q",
+                "value": "{1}"
+              }
+            ]
+          },
+          "scheme": "https",
+          "host": "www.google.com",
+          "path": "/search"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "*://search.yahoo.com/search*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "q",
+                "value": "{1}"
+              }
+            ]
+          },
+          "scheme": "https",
+          "host": "www.google.com",
+          "path": "/search"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "*://*.mcafee.com/search*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

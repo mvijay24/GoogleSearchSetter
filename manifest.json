@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Google Search Redirector",
+  "version": "1.0",
+  "description": "Redirects searches to Google",
+  "permissions": [
+    "webNavigation",
+    "webRequest",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://*/*",
+    "*://www.bing.com/*",
+    "*://search.yahoo.com/*",
+    "*://*.mcafee.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+}
